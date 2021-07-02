@@ -11,6 +11,7 @@
   <modules>
     <module>java-playground-json</module>
     <module>java-playground-velocity</module>
+      <module>java-playground-general</module>
   </modules>
 
   <name>java-playground</name>
