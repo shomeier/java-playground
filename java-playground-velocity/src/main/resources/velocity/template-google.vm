@@ -1,0 +1,93 @@
+#macro( format $score)
+$math.roundTo(2, $math.mul($score, 100)) %##
+#end
+#macro( pretty $json $threshold)
+<b>Logo Annotations</b>
+<table>
+    #set ($noLogos = true)##
+    #foreach($annot in $json.logoAnnotations)
+        #if($annot.score > $threshold)
+            #set ($noLogos = false)##
+    <tr>
+        <td>$annot.description&nbsp;&nbsp;&nbsp;</td>
+        <td>#format($annot.score)</td>
+    </tr>
+        #end
+    #end
+</table>
+#if($noLogos)
+<i>No Logo Annotations detected</i>
+#end
+<hr>
+<b>Label Annotations</b>
+<table>
+    #set ($noLabels = true)##
+    #foreach($annot in $json.labelAnnotations)
+        #if($annot.score > $threshold)
+            #set ($noLabels = false)##
+    <tr>
+        <td>$annot.description&nbsp;&nbsp;&nbsp;</td>
+        <td>#format($annot.score)</td>
+    </tr>
+        #end
+    #end
+</table>
+#if($noLabels)
+<i>No Label Annotations detected</i>
+#end
+<hr>
+<b>Safe Search Annotations</b>
+<table>
+    <tr>
+        <td>ADULT&nbsp;&nbsp;&nbsp;</td>
+        <td>$json.safeSearchAnnotation.adult</td>
+    </tr>
+    <tr>
+        <td>SPOOF&nbsp;&nbsp;&nbsp;</td>
+        <td>$json.safeSearchAnnotation.spoof</td>
+    </tr>
+    <tr>
+        <td>MEDICAL&nbsp;&nbsp;&nbsp;</td>
+        <td>$json.safeSearchAnnotation.medical</td>
+    </tr>
+    <tr>
+        <td>VIOLENCE&nbsp;&nbsp;&nbsp;</td>
+        <td>$json.safeSearchAnnotation.violence</td>
+    </tr>
+    <tr>
+        <td>RACY&nbsp;&nbsp;&nbsp;</td>
+        <td>$json.safeSearchAnnotation.racy</td>
+    </tr>
+</table>
+<hr>
+<b>Web Detections - Entities</b>
+<table>
+    #set ($noWebEntities = true)##
+    #foreach($annot in $json.webDetection.webDetection)
+        #if($annot.score > $threshold)
+            #set ($noWebEntities = false)##
+    <tr>
+        <td>$annot.description&nbsp;&nbsp;&nbsp;</td>
+        <td>#format($annot.score)</td>
+    </tr>
+        #end
+    #end
+</table>
+#if($noWebEntities)
+<i>No Web Entities detected</i>
+#end
+<hr>
+<b>Web Detections - Best Guess Label</b>
+<table>
+    #foreach($annot in $json.webDetection.bestGuessLabels)
+    <tr>
+        <td>$annot.label</td>
+    </tr>
+    #end
+</table>
+<hr>
+#end
+##
+#set($json = $json.parse($inputString))##
+#set($threshold = $varMap.getDouble("ext.ai-imagetagging.tagThreshold").get())##
+#pretty($json, $threshold)
