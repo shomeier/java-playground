@@ -1,3 +1,12 @@
+target
+
+## IDE's
+
+# IntelliJ
 .idea
 *.iml
-target
+
+# VSC / Eclipse
+.settings
+.classpath
+.project
