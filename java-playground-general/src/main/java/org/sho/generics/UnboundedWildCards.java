@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class UnboundedWildCards {
 
-    void test() {
+    public static void main(String args[]) {
 
         // a list with an unbounded wiildcard is covariant like arrays
         // and therefore not type safe
@@ -18,6 +18,12 @@ public class UnboundedWildCards {
 
         // thats why the compiler only allows you to insert 'null' into an unbounded list
         unboundedList.add(null);
+
+        // with arrays this works:
+        Number[] numbers = new Number[10];
+        numbers = new Integer[10];
+        // runtime error - ArrayStoreException because a Double is not an Integer
+        numbers[0] = Double.valueOf(3.4);
     }
 }
 
