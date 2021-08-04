@@ -24,6 +24,9 @@ public class SimplePattern {
         // We need a Matcher to match our compiled RegEx to a String
         Matcher m = p.matcher(myString);
 
+        // Entire region does not match beacause of ellipsis (...)
+        System.out.println("Entire string matches: " + m.matches());
+
         // if our Matcher finds a match
         if (m.find()) {
             // Print the match
