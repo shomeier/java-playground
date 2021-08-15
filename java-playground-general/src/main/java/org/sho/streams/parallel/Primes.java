@@ -1,4 +1,4 @@
-package org.sho.lambdas.parallel;
+package org.sho.streams.parallel;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
