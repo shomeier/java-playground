@@ -1,4 +1,4 @@
-package org.sho.streams.parallel;
+package org.sho.stream.parallel;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
