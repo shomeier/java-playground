@@ -26,7 +26,7 @@ public class RawCollections {
         list.add("foo");
         list.add("bar");
 
-        // myclass is sucessfully added to the list
+        // myclass is sucessfully added to the list (raw type collections hold values of type Object)
         MyClass myClass = new MyClass("Baz");
         list.add(myClass);
 
