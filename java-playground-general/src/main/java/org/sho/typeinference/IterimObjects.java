@@ -31,6 +31,7 @@ class Product {
 
 public class IterimObjects {
 
+    // https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html
     public static void main(String[] args) {
         var products = List.of(
                 new Product(10, 3, "Apple"),
