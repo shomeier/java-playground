@@ -42,6 +42,7 @@ public class VarFileVisitor {
         };
 
         // thx to local variable type inference we can access the fields here
+        // see also: https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html (scroll down to "Type Inference with Non-Denotable Types")
         System.out.println("Count Files = " + visitor.countFiles);
         System.out.println("Count Dirs = " + visitor.countDirs);
 
