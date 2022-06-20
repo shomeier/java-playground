@@ -14,7 +14,8 @@ public class BufferedReaderDemo {
 
     public static void main(String[] args) throws URISyntaxException, IOException {
 
-        URL resource = BufferedReaderDemo.class.getResource("/org/sho/read/utf-8.txt");
+        // URL resource = BufferedReaderDemo.class.getResource("/org/sho/read/utf-8.txt");
+        URL resource = BufferedReaderDemo.class.getResource("/org/sho/read/iso-8859-1.txt");
         Path path = Paths.get(resource.toURI());
 
         try(BufferedReader br = Files.newBufferedReader(path, StandardCharsets.ISO_8859_1)) {
