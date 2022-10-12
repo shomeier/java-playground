@@ -13,14 +13,14 @@ public class FindAnyVsFindFirst {
         // in non-parallel pipelines both (should) have the same behaviour (only affects parallel pipelines)
         System.out.println("FindAny...");
         Optional<Integer> result = list.stream()
-        .filter(num -> num < 4)
-        .peek(System.out::println)
-        .findAny(); // only oputput is "1"
+            .filter(num -> num < 4)
+            .peek(System.out::println)
+            .findAny(); // only oputput is "1"
 
         System.out.println("FindFirst...");
         result = list.stream()
-        .filter(num -> num < 4)
-        .peek(System.out::println)
-        .findFirst(); // only oputput is "1"
+            .filter(num -> num < 4)
+            .peek(System.out::println)
+            .findFirst(); // only oputput is "1"
     }
 }
