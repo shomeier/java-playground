@@ -1,0 +1,292 @@
+{
+    "assets": {
+        "asset": [
+            {
+                "id": 62511,
+                "meta": {
+                    "itm": [
+                        {
+                            "key": "annotationstate",
+                            "value": "false"
+                        },
+                        {
+                            "key": "archivestate",
+                            "value": "ONLINE"
+                        },
+                        {
+                            "key": "creationDate",
+                            "value": "2023-02-28T02:44:56.642Z"
+                        },
+                        {
+                            "key": "discriminator",
+                            "value": "IMG"
+                        },
+                        {
+                            "key": "downloadUrl",
+                            "value": "/dam/assets/bin?assetTid=559540EE-67CF-48C0-BE67-B4D17FE67F75"
+                        },
+                        {
+                            "key": "fileCreationDate",
+                            "value": "2023-02-28T02:44:54.338Z"
+                        },
+                        {
+                            "key": "fileModificationDate",
+                            "value": "2023-02-28T02:44:57.096Z"
+                        },
+                        {
+                            "key": "fileTypeShortName",
+                            "value": "JPEG"
+                        },
+                        {
+                            "key": "hidden",
+                            "value": "false"
+                        },
+                        {
+                            "key": "identity",
+                            "value": "62511"
+                        },
+                        {
+                            "key": "imageChecksum",
+                            "value": "674084bbc4096165b8c9ef11ccb728b41dfd9bb3f9e32157e65bd1ccf03df17a"
+                        },
+                        {
+                            "key": "imageChecksumHashAlgorithm",
+                            "value": "IM7"
+                        },
+                        {
+                            "key": "imageColorspace",
+                            "value": "YCBCR"
+                        },
+                        {
+                            "key": "imageHeightInMM",
+                            "value": "4292.599999999999"
+                        },
+                        {
+                            "key": "imageHeightInPixel",
+                            "value": "169"
+                        },
+                        {
+                            "key": "imageICCProfile",
+                            "value": ""
+                        },
+                        {
+                            "key": "imageWidthInMM",
+                            "value": "7594.599999999999"
+                        },
+                        {
+                            "key": "imageWidthInPixel",
+                            "value": "299"
+                        },
+                        {
+                            "key": "imageXResolutionValue",
+                            "value": "1.0"
+                        },
+                        {
+                            "key": "imageYResolutionValue",
+                            "value": "1.0"
+                        },
+                        {
+                            "key": "modificationDate",
+                            "value": "2023-03-21T10:58:50.511Z"
+                        },
+                        {
+                            "key": "nameWithoutExtension",
+                            "value": "bw1"
+                        },
+                        {
+                            "key": "numberOfVersions",
+                            "value": "0"
+                        },
+                        {
+                            "key": "online",
+                            "value": "true"
+                        },
+                        {
+                            "key": "pathStringStr",
+                            "value": "/Images/bw1.jpeg"
+                        },
+                        {
+                            "key": "previewCoarse",
+                            "value": "D9E33BCB-B990-4FEB-8B9E-6BF9CD2F8805"
+                        },
+                        {
+                            "key": "previewOriginal",
+                            "value": ""
+                        },
+                        {
+                            "key": "previewOriginalMultimedia",
+                            "value": ""
+                        },
+                        {
+                            "key": "previewOriginalPixel",
+                            "value": "5E16E7E8-9B0F-4AD2-B891-195CA63F4DB9"
+                        },
+                        {
+                            "key": "previewOriginalVector",
+                            "value": ""
+                        },
+                        {
+                            "key": "previewThumbnail",
+                            "value": "FE9396FF-69BE-4AE6-8E4A-6308A1361676"
+                        },
+                        {
+                            "key": "resourceSize",
+                            "value": "0"
+                        },
+                        {
+                            "key": "rncIdentifier",
+                            "value": "MAM"
+                        },
+                        {
+                            "key": "size",
+                            "value": "14177"
+                        },
+                        {
+                            "key": "thumbnailUrl",
+                            "value": "/dam/assets/bin?assetTid=559540EE-67CF-48C0-BE67-B4D17FE67F75&format=previewThumbnail"
+                        },
+                        {
+                            "key": "totalChecksum",
+                            "value": "2567313e307414dc7715a8a719de06f7"
+                        },
+                        {
+                            "key": "totalChecksumHashAlgorithm",
+                            "value": "MD5"
+                        },
+                        {
+                            "key": "totalSize",
+                            "value": "14177"
+                        }
+                    ]
+                },
+                "name": "bw1.jpeg",
+                "parent": "D8056D24-BEAE-41E9-8485-D744C7F0D555",
+                "tid": "559540EE-67CF-48C0-BE67-B4D17FE67F75",
+                "type": "IMG",
+                "vals": {
+                    "val": [
+                        {
+                            "attr": "ENUM_TEST",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "pos": 0,
+                                    "value": "Pocari"
+                                },
+                                {
+                                    "pos": 1,
+                                    "value": "Fanta"
+                                },
+                                {
+                                    "pos": 2,
+                                    "value": "CocaCola"
+                                },
+                                {
+                                    "pos": 3,
+                                    "value": "Pepsi"
+                                }
+                            ],
+                            "type": "multiple"
+                        },
+                        {
+                            "attr": "OMN_ASSET_AI_IMAGETAG_CLARIFAI",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "value": "Pferd Wiese Tier"
+                                }
+                            ]
+                        },
+                        {
+                            "attr": "OMN_ASSET_AI_AUDIT_START_TIME",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "value": "2023-03-20T02:41:24.864Z"
+                                }
+                            ]
+                        },
+                        {
+                            "attr": "OMN_ASSET_AI_AUDIT_END_TIME",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "value": "2023-03-20T02:41:51.095Z"
+                                }
+                            ]
+                        },
+                        {
+                            "attr": "OMN_ASSET_AI_AUDIT_STATUS",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "value": "WFL Finished"
+                                }
+                            ]
+                        },
+                        {
+                            "attr": "OMN_ASSET_AI_AUDIT_PROCESS_NAME",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "value": "ai-imageprocessing-autoretouch"
+                                }
+                            ]
+                        },
+                        {
+                            "attr": "ENUM_TEST_LANGDEP",
+                            "i18N": [
+                                {
+                                    "itm": [
+                                        {
+                                            "pos": 0,
+                                            "value": "abcdefEnglish"
+                                        }
+                                    ],
+                                    "loc": "en_EN"
+                                },
+                                {
+                                    "itm": [
+                                        {
+                                            "pos": 0,
+                                            "value": "abcdefGerman"
+                                        }
+                                    ],
+                                    "loc": "de_DE"
+                                }
+                            ],
+                            "itm": [],
+                            "type": "multi_loc"
+                        },
+                        {
+                            "attr": "OMN_ASSET_AI_IMAGETAG",
+                            "i18N": [],
+                            "itm": [
+                                {
+                                    "value": "CoffeeHouse"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "meta": {
+        "itm": [
+            {
+                "key": "messageType",
+                "value": "request"
+            },
+            {
+                "key": "messageTime",
+                "value": "2023-03-22T04:22:40.036Z"
+            },
+            {
+                "key": "sourceEnv",
+                "value": "web"
+            }
+        ]
+    },
+    "schemaVersion": "5.6.0"
+}
