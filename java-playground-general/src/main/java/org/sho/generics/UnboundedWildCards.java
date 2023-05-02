@@ -7,7 +7,12 @@ public class UnboundedWildCards {
 
     public static void main(String args[]) {
 
-        // a list with an unbounded wiildcard is covariant like arrays
+        // an unbounded wildcard is simply a placeholder for a "specific but unknown type"
+        // A List<?> is therefore completely different to List<Object> which can contain all kinds of objects:
+        List<Object> objList = new ArrayList<>();
+        objList.add(Integer.valueOf(10));
+
+        // a list with an unbounded wildcard is covariant like arrays
         // and therefore not type safe
         List<?> unboundedList = new ArrayList<>();
         unboundedList = new ArrayList<Integer>();
@@ -24,6 +29,45 @@ public class UnboundedWildCards {
         numbers = new Integer[10];
         // runtime error - ArrayStoreException because a Double is not an Integer
         numbers[0] = Double.valueOf(3.4);
+
+
+        // generics on collections are invariant
+        // so the following is not allowed:
+        List<Number> numberList = new ArrayList<>();
+        // numberList = new ArrayList<Integer>(); does not compile
+
+        // ... but this works
+        List<? extends Number> numberList2 = new ArrayList<>();
+        numberList2 = new ArrayList<Integer>();
+
+        List<? super Integer> numberList3 = new ArrayList<>();
+        numberList3 = new ArrayList<Number>();
+
+
+        // same on all type parameterized classes
+        var test = new Test<Object>();
+        var test2 = new Test<Number>();
+
+        // test = test2; does not compile
+
+        // but of course this works
+        var obj = new Object();
+        var integer = Integer.valueOf(10);
+        obj = integer;
+
+
+        // when not using wildcards
+        List<Integer> intList = new ArrayList<>();
+        intList.add(Integer.valueOf(10));
+        Integer myInt = intList.get(0);
+    }
+
+    static class Test<T> {
+
+        private T test;
+
+        public void test(Object t) {
+        }
     }
 }
 
