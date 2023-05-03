@@ -7,10 +7,13 @@ public class UnboundedWildCards {
 
     public static void main(String args[]) {
 
-        // an unbounded wildcard is simply a placeholder for a "specific but unknown type"
+        // an unbounded wildcard is simply a placeholder for one "specific but unknown type"
         // A List<?> is therefore completely different to List<Object> which can contain all kinds of objects:
         List<Object> objList = new ArrayList<>();
         objList.add(Integer.valueOf(10));
+
+        // same as a "capture of bounded wildcards" is a placholder for one "specific but unknown type"
+        List<? extends Number> testList = new ArrayList<>();
 
         // a list with an unbounded wildcard is covariant like arrays
         // and therefore not type safe
