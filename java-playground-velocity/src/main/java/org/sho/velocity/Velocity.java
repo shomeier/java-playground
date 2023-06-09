@@ -44,13 +44,14 @@ public class Velocity {
             LOGGER.info("KEY: {}", key);
         }
 
-        Template template = velocityEngine.getTemplate("velocity/template-google.vm");
-        Map<String, Object> variables = Map.of("ext.ai-imagetagging.tagThreshold", Double.valueOf(0.40));
+        // Template template = velocityEngine.getTemplate("velocity/template-google.vm");
+        Template template = velocityEngine.getTemplate("velocity/template-google-colors.vm");
+        Map<String, Object> variables = Map.of("ext.ai-imagetagging.tagThreshold", Double.valueOf(0.000001));
         context.put("inputString", jsonString);
         context.put("variables", variables);
 
         StringWriter writer = new StringWriter();
         template.merge( context, writer );
-        LOGGER.info("RESULT: {}", writer);
+        LOGGER.info("RESULT: \n{}", writer);
     }
 }

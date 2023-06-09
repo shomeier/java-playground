@@ -1,0 +1,40 @@
+#macro( format $score)
+  $math.roundTo(2, $math.mul($score, 100)) %##
+#end
+#macro( colors $json $threshold)
+    #set ($hasProcessableContent = false)##
+    #if($json.imagePropertiesAnnotation.dominantColors.colors)
+        #set ($hasProcessableContent = true)##
+<b>Dominant Colors</b>
+<table>
+    <tr>
+        <th>Color</th>
+        <th>Score</th>
+        <th>Pixel-Fraction</th>
+    </tr>
+        #set ($noColors = true)##
+        #foreach($color in $json.imagePropertiesAnnotation.dominantColors.colors)
+            #if($color.score > $threshold)
+                #set ($noColors = false)##
+    <tr>
+        <td bgcolor="rgb($color.color.red, $color.color.green, $color.color.blue)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>#format($color.score)</td>
+        <td>#format($color.pixelFraction)</td>
+    </tr>
+            #end
+        #end
+</table>
+        #if($noColors)
+<i>No Dominant Colors detected</i>
+        #end
+<hr>
+    #end
+    #if(!$hasProcessableContent)
+<i>Google result contains no processable content.<br>
+        Did you set the proper features for Google?</i>
+    #end
+#end
+##
+#set($json = $json.parse($inputString))##
+#set($threshold = $variables.get("ext.ai-imagetagging.tagThreshold"))##
+#colors($json, $threshold)
