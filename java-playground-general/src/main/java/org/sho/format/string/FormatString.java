@@ -4,6 +4,8 @@ public class FormatString {
 
     public static void main(String[] args) {
 
+        System.out.println(String.format("%06.2f", 0.12356));
+
         String format = String.format("%d %<d %2$d", 100, 200, 300);
         System.out.println(format);
 
