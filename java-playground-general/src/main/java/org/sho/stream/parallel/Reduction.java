@@ -1,6 +1,7 @@
 package org.sho.stream.parallel;
 
 import java.util.Arrays;
+import java.util.Set;
 import java.util.List;
 
 public class Reduction {
@@ -11,7 +12,8 @@ public class Reduction {
             .reduce("", String::concat);
         System.out.println("ReduceOne: " + reduceOne);
 
-        String reduceTwo = List.of('w', 'o', 'l', 'f', 'w', 'o', 'l', 'f', 'w', 'o', 'l', 'f').stream().parallel()
+        // Source Collection is unordered which results in an unordered result set
+        String reduceTwo = Set.of('w', 'o', 'l', 'f').stream().parallel()
             .reduce("", (s1, c) ->
             {
                 System.out.println(String.format("Acc - s1: %s, c: %s", s1, c));
